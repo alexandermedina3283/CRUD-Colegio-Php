@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/misEstilos.css">
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/misEstilos.css">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <title>Mi Colegio</title>
 </head>
 <body class="bg-white">
@@ -15,19 +15,19 @@
         <div class="d-flex flex-row justify-content-between">   
 
         <div>
-            <img class="logo" src="./assets/pic/logo.png" alt="">            
+            <img class="logo" src="../assets/pic/logo.png" alt="">            
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">MiColegio</a>
+              <a class="navbar-brand" href="../Controlador/vistasControlador.php?rutaOpc=1">Mi Colegio</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="../Controlador/vistasControlador.php?rutaOpc=1">Inicio</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Login</a>
@@ -35,8 +35,8 @@
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Coordinador</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Crear Estudiante</a></li>
-                      <li><a class="dropdown-item" href="#">Listar Estudiante</a></li>                      
+                      <li><a class="dropdown-item" href="../Controlador/vistasControlador.php?rutaOpc=2">Registrar calificación</a></li>
+                      <li><a class="dropdown-item" href="../Controlador/listarEstudianteControlador.php">Listar Estudiante</a></li>                      
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -63,46 +63,23 @@
         </div>
 
           <div class="p-2 mb-1 bg-info text-dark">           
-            <p class="fs-3 fw-bold text-center">Un lugar para aprender en familia</p>
+            <p class="fs-3 fw-bold text-center">Mi Colegio "Un lugar para aprender en familia"</p>
         </div>
         
 
     </header>
     <main class="bg-light">
 
-       <div class="d-flex justify-content-center">
+    <?php
 
-        <div class="bg-info border rounded p-2 m-2 w-25">
-            <img class="img-fluid" src="./assets/pic/regresoclases.png" alt="">
-            <p class="fs-5 text-info bg-dark text-center">Recomendaciones para regreso a clases</p>
-            <p class="fs-5 fw-normal text-start">1. Lavate las manos con agua y jabon</p>
-            <p class="fs-5 fw-normal text-start">2. No compartas utiles escolares</p>
-            <p class="fs-5 fw-normal text-start">3. Usa tapabocas en boca y nariz</p>
-            <p class="fs-5 fw-normal text-start">4. Manten la distancia de 2 mts entre estudiantes</p>
-            <p class="fs-5 fw-normal text-start">5. Limpia tu mesa al llegar y salir del salón</p>
-            <p class="fs-5 fw-normal text-start">6. Usa gel antibacterial</p>
-            <p class="fs-5 fw-normal text-start">7. Evita saludar de mano</p>
-        </div>
+   if (!isset($vista))
+        $vista="home.php";
 
-        <div class="d-flex flex-row bg-info border rounded p-2 m-2 w-50">
-          <img class="img-fluid" src="./assets/pic/alumnos.jpg" alt="">            
-        </div>
+        require $vista;
 
-        <div class="d-flex flex-column bg-info border rounded p-2 m-2 w-25">
-          <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Manual de convivencia 2021 Colegio</a></p>
-          <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Instructivo para descargar recibos de pensión 2021</a></p>
-          <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Circular 003 Asamblea de padres y representantes</a></p>
-          <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Circular inicio de clases 2021</a></p>
-          <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Circular 005 Asamblea de padres y representantes</a></p>
-          <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Listado admisiones 2021</a></p>
-          <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Últimas noticias</a></p>
-          <img class="img-fluid" src="./assets/pic/lineacredito.jpg" alt="">
-          <p class="fs-5 fw-normal text-center">Campaña pendon por un mañana</p>
-          <img class="img-fluid" src="./assets/pic/campaña.jpg" alt="">                                    
-        </div>
 
-       </div>
 
+   ?> 
 
 
     </main>
@@ -141,6 +118,6 @@
       </footer>
 
 
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
