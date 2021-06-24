@@ -119,5 +119,6 @@
 
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/d51e0c6239.js" crossorigin="anonymous"></script>
 </body>
 </html>

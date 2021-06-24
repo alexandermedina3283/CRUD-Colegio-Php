@@ -66,6 +66,14 @@ class operacionesCrud extends Conexion {
         }
     }
 
+     /*public function usuarioLogueado($nombre) {
+        $consulta=$this->conexion->query("SELECT codigo,nombre,correo,rol from estudiante inner join rol on  Codigo = '".$codigo."'");
+        $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+        $this->conexion->close();
+        return $resultado;
+
+    }*/
+
 
 }
 

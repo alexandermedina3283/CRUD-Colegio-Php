@@ -3,7 +3,7 @@
 
     <div class="bg-white border rounded p-2 m-2 mt-3 w-50">
 
-    <p class="fs-5 fw-normal text-center">Listado Calificaciones primer semestre</p>
+    <p class="fs-6 fw-normal text-light bg-dark text-center">LISTADO CALIFICACIONES PRIMER TRIMESTRE 2021</p>
 
 
 <table class="table">
@@ -32,8 +32,8 @@
       <td><?php echo $estudiante['Nota1'] ?></td>
       <td><?php echo $estudiante['Nota2'] ?></td>
       <td><?php echo $estudiante['Nota3'] ?></td>      
-      <td><a href="../Controlador/estudianteDatosEditarControlador.php?idEstudiante=<?php echo $estudiante['Codigo'] ?>">Editar </a></td>
-      <td><a href="../Controlador/estudianteDatosEliminarControlador.php?idEstudiante=<?php echo $estudiante['Codigo'] ?>">Eliminar </a></td>
+      <td><a href="../Controlador/estudianteDatosEditarControlador.php?idEstudiante=<?php echo $estudiante['Codigo'] ?>"><i class="fas fa-edit" style="color: black;"></i></a></td>
+      <td><a href="../Controlador/estudianteDatosEliminarControlador.php?idEstudiante=<?php echo $estudiante['Codigo'] ?>"><i class="far fa-trash-alt" style="color: red;"></i></a></td>
     </tr>
 
      <?php
