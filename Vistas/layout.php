@@ -35,14 +35,14 @@
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Coordinador</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="../Controlador/vistasControlador.php?rutaOpc=2">Registrar calificación</a></li>
-                      <li><a class="dropdown-item" href="../Controlador/listarEstudianteControlador.php">Listar Estudiante</a></li>                      
+                      <li><a class="dropdown-item" href="../Controlador/vistasControlador.php?rutaOpc=2">Registrar estudiante</a></li>
+                      <li><a class="dropdown-item" href="../Controlador/listarEstudianteControlador.php">Consultar calificaciones</a></li>                      
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Profesor</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Editar notas</a></li>                                         
+                      <li><a class="dropdown-item" href="../Controlador/listarEditarCalificacionControlador.php">Editar notas</a></li>                                         
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
