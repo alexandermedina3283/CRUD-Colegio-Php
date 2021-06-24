@@ -33,7 +33,7 @@
       <td><?php echo $estudiante['Nota2'] ?></td>
       <td><?php echo $estudiante['Nota3'] ?></td>      
       <td><a href="../Controlador/estudianteDatosEditarControlador.php?idEstudiante=<?php echo $estudiante['Codigo'] ?>">Editar </a></td>
-      <td><a href="../Controlador/borrarEstudianteControlador.php?id=<?php echo $estudiante['Codigo'] ?>"> Eliminar </a></td>
+      <td><a href="../Controlador/estudianteDatosEliminarControlador.php?idEstudiante=<?php echo $estudiante['Codigo'] ?>">Eliminar </a></td>
     </tr>
 
      <?php

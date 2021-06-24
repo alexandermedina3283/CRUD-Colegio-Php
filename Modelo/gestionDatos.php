@@ -53,7 +53,18 @@ class operacionesCrud extends Conexion {
     }
 
 
+    public function eliminarDatosEstudiante($codigo){
+        $sql = "delete from estudiante where Codigo = '".$codigo."' ";
 
+        $resultado = $this->conexion->query($sql);
+        if ($resultado){
+            $this->conexion->close();
+            return true;
+        }else {
+            $this->conexion->close();
+            return false;
+        }
+    }
 
 
 }
