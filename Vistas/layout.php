@@ -10,50 +10,60 @@
 </head>
 <body class="bg-white">
 
-    <header>
+  <header>
 
-        <div class="d-flex flex-row justify-content-between">   
+    <div class="d-flex flex-row justify-content-between responsive">   
 
-        <div>
-            <img class="logo" src="../assets/pic/logo.png" alt="">            
-        </div>
+    <div>
+        <img class="logo" src="../assets/pic/logo.png" alt="">            
+    </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="../Controlador/vistasControlador.php?rutaOpc=1">Mi Colegio</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white responsive">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../Controlador/vistasControlador.php?rutaOpc=1">Mi Colegio</a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../Controlador/vistasControlador.php?rutaOpc=1">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Login</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Coordinador</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="../Controlador/vistasControlador.php?rutaOpc=2">Registrar estudiante</a></li>
-                      <li><a class="dropdown-item" href="../Controlador/listarEstudianteControlador.php">Consultar calificaciones</a></li>                      
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Profesor</a>
+             </button>
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../Controlador/vistasControlador.php?rutaOpc=1">Inicio</a>
+             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../Controlador/vistasControlador.php?rutaOpc=2">Nosotros</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../vistas/login.php">Login</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Coordinador</a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../Controlador/vistasControlador.php?rutaOpc=3">Registrar calificación</a></li>
+                      <li><a class="dropdown-item" href="../Controlador/listarEstudianteControlador.php">Consultar Estudiante</a></li>                      
+                  </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Profesor</a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="../Controlador/listarEditarCalificacionControlador.php">Editar notas</a></li>                                         
                     </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Estudiante</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Consultar notas</a></li>                                         
-                    </ul>
-                  </li>                                  
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Logout</a>
-                  </li>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Estudiante</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../Controlador/consultarNotasEstudianteControlador.php">Consultar notas</a></li>                                         
+                  </ul>
+            </li> 
+
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Logout</a>
+            </li>
                                         
                 </ul>              
               </div>
@@ -61,32 +71,26 @@
           </nav>
 
         </div>
-
           <div class="p-2 mb-1 bg-info text-dark">           
-            <p class="fs-3 fw-bold text-center">Mi Colegio "Un lugar para aprender en familia"</p>
+            <p class="fs-3 fw-bold text-center">Mi Colegio " Un Lugar Para Aprender En Familia"</p>
         </div>
-        
-
     </header>
-    <main class="bg-light">
 
+
+    <main class="bg-light">
     <?php
 
    if (!isset($vista))
         $vista="home.php";
 
         require $vista;
-
-
-
    ?> 
 
-
     </main>
+
     <footer class="bg-secondary">
         
         <div class="d-flex flex-row justify-content-evenly">        
-
         <div>
             <p class="h5">Fundación Educativa</p>
             <ul>
@@ -117,8 +121,8 @@
    
       </footer>
 
-
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/d51e0c6239.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

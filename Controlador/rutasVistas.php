@@ -10,6 +10,9 @@ class enrutamiento{
                 $v="home.php";
                 break;
             case 2:
+                $v="nosotros.php";
+                break;  
+            case 3:
                 $v="crearEstudiante.php";
                 break;                                    
             default:
