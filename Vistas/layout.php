@@ -36,7 +36,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../vistas/login.php">Login</a>
+              <a class="nav-link active" aria-current="page" href="../Controlador/vistasControlador.php?rutaOpc=4">Login</a>
             </li>
 
             <li class="nav-item dropdown">

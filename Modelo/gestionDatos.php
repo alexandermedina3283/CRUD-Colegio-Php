@@ -66,15 +66,34 @@ class operacionesCrud extends Conexion {
         }
     }
 
-     /*public function usuarioLogueado($nombre) {
-        $consulta=$this->conexion->query("SELECT codigo,nombre,correo,rol from estudiante inner join rol on  Codigo = '".$codigo."'");
-        $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+    public function validarUsuario($usuario, $clave){
+
+       $sql = "select Correo, Clave from estudiante where Correo = '".$usuario."' and Clave = '".$clave."';";
+        
+       $resultado = $this->conexion->query($sql); 
+       $row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);     
+      
+       if($row){
+           $this->conexion->close();
+            return true;               
+       }else{
+
+        $this->conexion->close();
+            return false;           
+                    
+       }      
+                 
+    }
+
+    public function usuarioLogeado($usuario){
+
+        $consulta= $this->conexion->query("select Nombre, Correo, Rol from estudiante where Correo = '".$usuario."';");
+        $resultado= $consulta->fetch_all(MYSQLI_ASSOC);
         $this->conexion->close();
         return $resultado;
-
-    }*/
-
+    }
 
 }
 
 ?>
+
