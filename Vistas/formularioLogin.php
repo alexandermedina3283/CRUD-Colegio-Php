@@ -5,6 +5,13 @@
     <div class="bg-white border rounded p-2 m-2 mt-3 w-25">
 
     <form action="../Controlador/usuarioLoginControlador.php" method="post">
+
+    <?php
+if (isset($ErrorCodigo))
+    
+     echo "<div class='alert alert-danger' role='alert'> $ErrorCodigo </div>"
+
+?>
         
         <fieldset>
 

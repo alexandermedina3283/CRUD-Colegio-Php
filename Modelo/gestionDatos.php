@@ -26,7 +26,7 @@ class operacionesCrud extends Conexion {
     public function obtenerCalificaciones(){
 
 
-        $consulta= $this->conexion->query('select * from estudiante');
+        $consulta= $this->conexion->query('select * from estudiante where Rol = "Estudiante"');
         $resultado= $consulta->fetch_all(MYSQLI_ASSOC);
         $this->conexion->close();
         return $resultado;
@@ -87,7 +87,7 @@ class operacionesCrud extends Conexion {
 
     public function usuarioLogeado($usuario){
 
-        $consulta= $this->conexion->query("select Nombre, Correo, Rol from estudiante where Correo = '".$usuario."';");
+        $consulta= $this->conexion->query("select Nombre, Correo, Rol , Nota1 , Nota2, Nota3 from estudiante where Correo = '".$usuario."';");
         $resultado= $consulta->fetch_all(MYSQLI_ASSOC);
         $this->conexion->close();
         return $resultado;

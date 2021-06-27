@@ -1,3 +1,9 @@
+<?php error_reporting (0);?>
+
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +26,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white responsive">
         <div class="container-fluid">
+          
           <a class="navbar-brand" href="../Controlador/vistasControlador.php?rutaOpc=1">Mi Colegio</a>
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,13 +38,13 @@
               <a class="nav-link active" aria-current="page" href="../Controlador/vistasControlador.php?rutaOpc=1">Inicio</a>
              </li>
 
+             <?php  if(isset($_SESSION["RolUsuario"])) {?>
             <li class="nav-item">
               <a class="nav-link" href="../Controlador/vistasControlador.php?rutaOpc=2">Nosotros</a>
             </li>
+            <?php } ?>
 
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../Controlador/vistasControlador.php?rutaOpc=4">Login</a>
-            </li>
+            <?php if(isset($_SESSION["RolUsuario"]) && $_SESSION["RolUsuario"] == "Coordinador") {?>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Coordinador</a>
@@ -46,25 +53,34 @@
                       <li><a class="dropdown-item" href="../Controlador/listarEstudianteControlador.php">Consultar Estudiante</a></li>                      
                   </ul>
             </li>
-
+            <?php  } 
+            if(isset($_SESSION["RolUsuario"]) && $_SESSION["RolUsuario"] == "Profesor") {?>
             <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Profesor</a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="../Controlador/listarEditarCalificacionControlador.php">Editar notas</a></li>                                         
                     </ul>
             </li>
-
+            <?php  } 
+          if(isset($_SESSION["RolUsuario"]) && $_SESSION["RolUsuario"] == "Estudiante") {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Estudiante</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../Controlador/consultarNotasEstudianteControlador.php">Consultar notas</a></li>                                         
+                    <li><a class="dropdown-item" href="../Controlador/vistasControlador.php?rutaOpc=5">Consultar notas</a></li>                                         
                   </ul>
             </li> 
-
+            <?php  } 
+             if(!isset($_SESSION["RolUsuario"])) {?>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Logout</a>
+           <a class="nav-link active" aria-current="page" href="../Controlador/vistasControlador.php?rutaOpc=4">Login</a>
             </li>
-                                        
+
+            <?php }else{ ?>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../Controlador/usuarioLogoutControlador.php">Logout</a>
+          </li>
+           
+          <?php } ?>                      
                 </ul>              
               </div>
             </div>

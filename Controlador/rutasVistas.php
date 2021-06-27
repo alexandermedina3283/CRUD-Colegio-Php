@@ -18,6 +18,10 @@ class enrutamiento{
             case 4:
                 $v="formularioLogin.php";
                 break;
+            case 5:
+                $v="consultarNotasEstudiante.php";
+                break;
+
             default:
                 $v="home.php";
                 break;
