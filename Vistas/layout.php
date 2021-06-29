@@ -87,7 +87,7 @@ session_start();
           </nav>
 
         </div>
-          <div class="p-2 mb-1 bg-info text-dark">           
+          <div class="p-2 bg-info text-dark">           
             <p class="fs-3 fw-bold text-center">Mi Colegio " Un Lugar Para Aprender En Familia"</p>
         </div>
     </header>

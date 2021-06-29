@@ -4,7 +4,7 @@
 
 <div class="bg-white border rounded p-2 m-2 mt-3 w-75">
 
-<p class="fs-3 fw-bold text-start text-center">Bienvenido <?php echo $_SESSION['RolUsuario'].$_SESSION['NombreUsuario'];?> </p>
+<p class="fs-3 fw-bold text-start text-center">Bienvenido <?php echo $_SESSION['RolUsuario'];?>&nbsp<?php echo $_SESSION['NombreUsuario'];?> </p>
 <p class="fs-3 fw-bold text-start text-center">EQUIPO DE TRABAJO</p>
 
 
