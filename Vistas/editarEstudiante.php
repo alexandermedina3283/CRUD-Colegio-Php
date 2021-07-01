@@ -26,17 +26,17 @@
 
             <div class="form-group">
             <label for="notaUno">Nota 1</label>
-            <input class="form-control" name="notaUno" id="notaUno" type="text" placeholder="Ingrese Calificación" value="<?php echo $nota1?>" required /> <br/>
+            <input class="form-control" name="notaUno" id="notaUno" type="number" step="0.01" min="0" max="5" placeholder="Ingrese Calificación" value="<?php echo $nota1?>" required /> <br/>
             </div>
 
             <div class="form-group">
             <label for="notaDos">Nota 2</label>
-            <input class="form-control" name="notaDos" id="notaDos" type="text" placeholder="Ingrese Calificación" value="<?php echo $nota2?>" required /> <br/>
+            <input class="form-control" name="notaDos" id="notaDos" type="number" step="0.01" min="0" max="5" placeholder="Ingrese Calificación" value="<?php echo $nota2?>" required /> <br/>
             </div>
 
             <div class="form-group">
             <label for="notaTres">Nota 3</label>
-            <input class="form-control" name="notaTres" id="notaTres" type="text" placeholder="Ingrese Calificación" value="<?php echo $nota3?>" required /> <br/>
+            <input class="form-control" name="notaTres" id="notaTres" type="number" step="0.01" min="0" max="5" placeholder="Ingrese Calificación" value="<?php echo $nota3?>" required /> <br/>
             </div>
 
 
