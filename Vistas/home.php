@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center">
 
-<div class="bg-info border rounded p-2 m-2 w-25">
+<div class="d-flex flex-column bg-info border rounded p-2 m-2 w-25">
     <img class="img-fluid" src="../assets/pic/regresoclases.png" alt="">
     <p class="fs-5 text-info bg-dark text-center">Recomendaciones para regreso a clases</p>
     <p class="fs-5 fw-normal text-start">1. Lavate las manos con agua y jabon</p>
@@ -18,9 +18,7 @@
 
 <div class="d-flex flex-column bg-info border rounded p-2 m-2 w-25">
   <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Manual de convivencia 2021 Colegio</a></p>
-  <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Instructivo para descargar recibos de pensión 2021</a></p>
-  <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Circular 003 Asamblea de padres y representantes</a></p>
-  <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Circular inicio de clases 2021</a></p>
+  <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Instructivo para descargar recibos de pensión 2021</a></p>  
   <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Circular 005 Asamblea de padres y representantes</a></p>
   <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Listado admisiones 2021</a></p>
   <p class="fs-5 fw-bold text-start"><a href="#" class="link-dark">Últimas noticias</a></p>

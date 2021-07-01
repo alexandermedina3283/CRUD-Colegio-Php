@@ -106,7 +106,7 @@ session_start();
 
     <footer class="bg-secondary">
         
-        <div class="d-flex flex-row justify-content-evenly">        
+        <div class="d-flex flex-row justify-content-evenly pt-2">        
         <div>
             <p class="h5">Fundación Educativa</p>
             <ul>
